@@ -1,6 +1,6 @@
 {
   "name": "asynchronaut",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Asynchronaut - Navigate the Cosmos of Async Programming Effortlessly.",
   "main": "index.js",
   "type": "module",
