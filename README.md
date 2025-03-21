@@ -17,9 +17,39 @@ const { runSequentially, runParallel } = require('asynchronaut');
 Or, if you're using ESM:
 ```javascript
 import { runSequentially, runParallel } from 'asynchronaut';
+
+// Sample tasks
+const tasks = [
+    () => new Promise(res => setTimeout(() => res("Task 1 Complete"), 1000)),
+    () => new Promise(res => setTimeout(() => res("Task 2 Complete"), 500)),
+    () => new Promise(res => setTimeout(() => res("Task 3 Complete"), 300))
+];
+
+(async () => {
+    try {
+        const results = await runSequentially(tasks);
+        console.log(results); 
+        // Output: ["Task 1 Complete", "Task 2 Complete", "Task 3 Complete"]
+    } catch (error) {
+        console.error(error.message);
+    }
+})();
+
+(async () => {
+    try {
+        const results = await runParallel(tasks);
+        console.log(results); 
+        // Output: ["Task 1 Complete", "Task 2 Complete", "Task 3 Complete"]
+    } catch (error) {
+        console.error(error.message);
+    }
+})();
+
 ```
 
 ## 📌 **Available Functions**
+
+For usage details, checkout `src/test/`
 
 ### 1. `runSequentially`
 - Executes an array of async tasks one after another in sequence.  
