@@ -1,6 +1,6 @@
 # Asynchronaut 🚀
 
-Asynchronaut is a powerful utility library for handling JavaScript promises like a pro. Simplify your async workflows with easy-to-use functions like `runSequentially`, `runParallel`, and `retry`.
+Asynchronaut is a powerful utility library for handling JavaScript promises like a pro. Simplify your async workflows with easy-to-use functions like `runSequentially`, `runParallel`, and `retry` and many more.
 
 More to be added soon.
 
@@ -12,11 +12,11 @@ npm install asynchronaut
 ## Usage
 Import the functions you need:
 ```javascript
-const { runSequentially, runParallel, retry } = require('asynchronaut');
+const { runSequentially, runParallel } = require('asynchronaut');
 ```
 Or, if you're using ESM:
 ```javascript
-import { runSequentially, runParallel, retry } from 'asynchronaut';
+import { runSequentially, runParallel } from 'asynchronaut';
 ```
 
 ## 📌 **Available Functions**
@@ -32,6 +32,15 @@ import { runSequentially, runParallel, retry } from 'asynchronaut';
 ### 3. `retry`
 - Retries a provided async function a specified number of times until it succeeds or retries are exhausted.
 - Returns a promise that resolves with the successful result or rejects if all attempts fail.
+
+### 4. `timeoutPromise`
+- Executes a given asynchronous task with a specified timeout limit. If the task does not complete within the time limit, the promise is rejected.
+- Returns a Promise that resolves with the task's result or rejects with a timeout error.
+
+## Running Tests (Jest)
+```
+npm test
+```
 
 ## 📖 License
 MIT
