@@ -80,6 +80,10 @@ For usage details, checkout `src/test/`
 - Delays the execution of async task until after a specified wait time.
 - Returns a Promise that resolves with the task's result or rejects with a timeout error.
 
+### 6. `throttlePromise`
+
+- Throttles an asynchronous task function that returns a Promise, ensuring it is not executed more than once in the specified delay period.
+
 ## Running Tests (Jest)
 
 ```
