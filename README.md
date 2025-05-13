@@ -84,6 +84,11 @@ For usage details, checkout `src/test/`
 
 - Throttles an asynchronous task function that returns a Promise, ensuring it is not executed more than once in the specified delay period.
 
+### 7. `batchPromises`
+
+- Processes an array of async tasks in batches of given size.
+- A possible use case can be, "How can I run 100 API calls but only 5 at a time to avoid overloading the server?" -> Use asynchronaut's batchPromises() function.
+
 ## Running Tests (Jest)
 
 ```
